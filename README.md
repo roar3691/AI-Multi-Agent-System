@@ -1,7 +1,7 @@
 ```markdown
 # AI/GenAI Use Case Generator
 
-A sophisticated multi-agent system that automatically researches companies and generates AI/GenAI use cases using LLaMA model and Tavily API.
+A multi-agent system that researches companies and generates AI/GenAI use cases using LLaMA model and Tavily API. Developed by Y RAGHUVAMSHI REDDY.
 
 ## Architecture
 ```mermaid
@@ -16,18 +16,16 @@ graph TD
 
 ## Features
 
-- **Automated Research**: Uses Tavily API to gather company information, market position, and AI initiatives
-- **AI Use Case Generation**: Leverages LLaMA model for context-aware use case generation
-- **Structured Output**: Generates detailed JSON reports with research findings and use cases
-- **Error Handling**: Comprehensive error management and recovery
-- **Optimized Performance**: Fast processing with parallel requests and efficient data handling
+- **Automated Research**: Uses Tavily API for comprehensive company analysis
+- **AI Use Case Generation**: LLaMA-powered context-aware use case generation
+- **Structured Output**: Detailed JSON reports with research findings
+- **Error Handling**: Comprehensive error management
+- **Optimized Performance**: Fast processing with parallel requests
 
 ## Prerequisites
 
 - Python 3.9+
-- API Keys:
-  - Tavily API key: `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`
-  - HuggingFace API key: `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`
+- API Keys (instructions below)
 
 ## Installation
 
@@ -41,6 +39,11 @@ cd AI-Multi-Agent-System
 ```bash
 pip install langchain-community huggingface_hub requests
 ```
+
+3. Set up API Keys:
+   - Visit [Tavily](https://tavily.com) to get your API key
+   - Sign up at [HuggingFace](https://huggingface.co) for access token
+   - Add keys to the script or environment variables
 
 ## Usage
 
@@ -64,11 +67,11 @@ Report saved: reports/tesla_20241027_181232_ai_recommendations.json
 The system generates structured JSON reports:
 ```json
 {
-    "company_name": "tesla",
+    "company_name": "company",
     "analysis_date": "2024-10-27",
     "research_data": {
         "company_info": {
-            "summary": "Tesla, Inc. designs, develops, manufactures...",
+            "summary": "Company overview...",
             "details": [...]
         },
         "market_info": {...},
@@ -100,8 +103,8 @@ The system generates structured JSON reports:
 
 ## Performance Optimizations
 
-- Reduced token generation (max_tokens=1000)
-- Optimized context window (n_ctx=2048)
+- Reduced token generation
+- Optimized context window
 - Parallel API requests
 - Efficient data extraction
 - Quick summary generation
@@ -144,7 +147,7 @@ MIT License
 
 ## Author
 
-Y.Raghuvamshi Reddy
+Y RAGHUVAMSHI REDDY
 
 ## Acknowledgments
 
@@ -152,5 +155,13 @@ Y.Raghuvamshi Reddy
 - Tavily API
 - HuggingFace
 - LLaMA Model
-
 ```
+
+This README provides:
+1. Clear project overview
+2. Installation steps
+3. API key setup instructions
+4. Usage examples
+5. System architecture
+6. Component details
+7. Future improvements
