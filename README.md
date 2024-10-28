@@ -1,14 +1,41 @@
-```markdown
 # AI/GenAI Use Case Generator
 
-A multi-agent system that researches companies and generates AI/GenAI use cases using LLaMA model and Tavily API. The system performs comprehensive company research, analyzes market positions, and generates practical AI implementation recommendations.
+A multi-agent system that researches companies and generates AI/GenAI use cases using LLaMA model and Tavily API. Built by Y RAGHUVAMSHI REDDY.
+
+## Architecture
+```mermaid
+graph TD
+    A[User Input] --> B[Research Agent]
+    
+    subgraph Research Phase
+        B --> C1[Company Research]
+        B --> C2[Market Research]
+        B --> C3[AI Initiatives Research]
+        C1 --> D[Tavily API]
+        C2 --> D
+        C3 --> D
+        D --> E[Data Processing]
+    end
+    
+    subgraph Analysis Phase
+        E --> F[Data Aggregation]
+        F --> G[LLaMA Model]
+        G --> H[Use Case Generation]
+    end
+    
+    subgraph Output Phase
+        H --> I[Use Case Parsing]
+        I --> J1[JSON Report]
+        I --> J2[Console Output]
+    end
+```
 
 ## Features
 
 - **Automated Research**: 
-  - Company overview and business model analysis
-  - Market position and competitor analysis
-  - AI/ML initiatives identification
+  - Comprehensive company analysis
+  - Market position evaluation
+  - AI initiatives identification
   - Real-time data gathering
 
 - **AI Use Case Generation**:
@@ -18,31 +45,30 @@ A multi-agent system that researches companies and generates AI/GenAI use cases 
   - Impact evaluation
 
 - **Structured Output**:
-  - Detailed JSON reports
-  - Comprehensive summaries
+  - JSON formatted reports
+  - Detailed summaries
   - Implementation guidelines
   - Timeline estimates
 
-## Sample Output Structure
+## Sample Output (Tesla Analysis)
 ```json
 {
-    "company_name": "company_name",
-    "analysis_date": "YYYY-MM-DD",
+    "company_name": "tesla",
+    "analysis_date": "2024-10-27",
     "research_data": {
         "company_info": {
-            "summary": "Company overview...",
+            "summary": "Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems...",
             "details": [...]
         },
         "market_info": {
-            "summary": "Market position...",
+            "summary": "Industry analysis, market position, and competitive landscape...",
             "details": [...]
         },
         "ai_info": {
-            "summary": "AI initiatives...",
+            "summary": "AI initiatives, machine learning implementations, and technological innovations...",
             "details": [...]
         }
-    },
-    "ai_use_cases": [...]
+    }
 }
 ```
 
@@ -89,27 +115,28 @@ Run the system:
 python ai_usecase_system.py
 ```
 
-Enter a company name when prompted. The system will:
-1. Research the company
-2. Generate AI use cases
-3. Save a detailed report
+The system will:
+1. Accept company name input
+2. Research company details
+3. Generate AI use cases
+4. Save comprehensive report
 
 ## System Components
 
 1. **Research Agent**
-   - Company information gathering
-   - Market analysis
-   - AI initiatives research
+   - Multi-category data gathering
+   - Parallel API requests
+   - Data validation
 
 2. **LLaMA Integration**
+   - Context-aware processing
    - Use case generation
-   - Context-aware recommendations
    - Implementation guidance
 
 3. **Report Generator**
-   - JSON report creation
-   - Structured output
-   - Detailed documentation
+   - Structured JSON output
+   - Console feedback
+   - File management
 
 ## Author
 
@@ -121,9 +148,13 @@ MIT License
 ```
 
 This README:
-1. Clearly describes the project
-2. Shows sample output format
-3. Provides installation steps
-4. Lists prerequisites
-5. Explains system components
-6. Includes usage examples
+1. Shows actual system architecture
+2. Includes real output example
+3. Provides clear installation steps
+4. Details system components
+5. Explains usage workflow
+
+Let me know if you need any modifications!
+
+Citations:
+[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/12812744/1a3ba81f-68bb-497c-8808-0bac7e8e7ce3/tesla_20241027_181232_ai_recommendations.json
