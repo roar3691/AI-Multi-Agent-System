@@ -144,7 +144,7 @@ MIT License
 
 ## Author
 
-Your Name
+Y.Raghuvamshi Reddy
 
 ## Acknowledgments
 
@@ -154,17 +154,3 @@ Your Name
 - LLaMA Model
 
 ```
-
-This README provides:
-1. Clear project overview
-2. Installation instructions
-3. Usage examples
-4. System architecture
-5. Component details
-6. Performance considerations
-7. Future improvements
-
-Let me know if you need any modifications!
-
-Citations:
-[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/12812744/1a3ba81f-68bb-497c-8808-0bac7e8e7ce3/tesla_20241027_181232_ai_recommendations.json
