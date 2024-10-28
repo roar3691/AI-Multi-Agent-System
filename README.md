@@ -18,39 +18,34 @@ graph TD
     end
     
     subgraph Analysis Phase
-        E --> F[Data Aggregation]
-        F --> G[LLaMA Model]
-        G --> H[Use Case Generation]
+        E --> F[LLaMA Model]
+        F --> G[Use Case Generation]
     end
     
     subgraph Output Phase
-        H --> I[Use Case Parsing]
-        I --> J1[JSON Report]
-        I --> J2[Console Output]
+        G --> H[JSON Report]
+        G --> I[Console Output]
     end
 ```
 
 ## Features
 
-- **Automated Research**: 
-  - Comprehensive company analysis
-  - Market position evaluation
-  - AI initiatives identification
-  - Real-time data gathering
+### Research Capabilities
+- Company overview and business model analysis
+- Market position and competitor research
+- AI/ML initiatives identification
 
-- **AI Use Case Generation**:
-  - Context-aware recommendations
-  - Implementation complexity assessment
-  - Resource requirement analysis
-  - Impact evaluation
+### AI Integration
+- LLaMA model for use case generation
+- Context-aware analysis
+- Structured output generation
 
-- **Structured Output**:
-  - JSON formatted reports
-  - Detailed summaries
-  - Implementation guidelines
-  - Timeline estimates
+### Output Generation
+- JSON formatted reports
+- Console summaries
+- Detailed use cases
 
-## Sample Output (Tesla Analysis)
+## Real Output Example (Tesla)
 ```json
 {
     "company_name": "tesla",
@@ -61,11 +56,11 @@ graph TD
             "details": [...]
         },
         "market_info": {
-            "summary": "Industry analysis, market position, and competitive landscape...",
+            "summary": "Industry analysis and market position...",
             "details": [...]
         },
         "ai_info": {
-            "summary": "AI initiatives, machine learning implementations, and technological innovations...",
+            "summary": "Machine learning algorithms process and analyze data, enabling Tesla's AI systems to learn, adapt, and evolve...",
             "details": [...]
         }
     }
@@ -75,9 +70,9 @@ graph TD
 ## Prerequisites
 
 - Python 3.9+
-- API Keys:
-  - Get Tavily API key from [Tavily](https://tavily.com)
-  - Get HuggingFace key from [HuggingFace](https://huggingface.co)
+- Required API Keys:
+  - Tavily API key
+  - HuggingFace API key
 
 ## Installation
 
@@ -87,26 +82,17 @@ git clone https://github.com/yourusername/AI-Multi-Agent-System.git
 cd AI-Multi-Agent-System
 ```
 
-2. Create virtual environment:
-```bash
-python -m venv venv
-source venv/bin/activate  # On Unix/macOS
-# or
-.\venv\Scripts\activate  # On Windows
-```
-
-3. Install dependencies:
+2. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Set up environment variables:
-   - Create `.env` file
-   - Add your API keys:
-     ```
-     TAVILY_API_KEY=your_tavily_key
-     HUGGINGFACE_KEY=your_huggingface_key
-     ```
+3. Set up environment variables:
+   Create `.env` file:
+   ```
+   TAVILY_API_KEY=your_tavily_key
+   HUGGINGFACE_KEY=your_huggingface_key
+   ```
 
 ## Usage
 
@@ -117,26 +103,27 @@ python ai_usecase_system.py
 
 The system will:
 1. Accept company name input
-2. Research company details
-3. Generate AI use cases
-4. Save comprehensive report
+2. Research using Tavily API
+3. Generate use cases using LLaMA
+4. Save JSON report
+5. Display results in console
 
-## System Components
+## Components
 
-1. **Research Agent**
-   - Multi-category data gathering
-   - Parallel API requests
-   - Data validation
+### Research Agent
+- Multi-category data gathering
+- Parallel API requests
+- Data validation
 
-2. **LLaMA Integration**
-   - Context-aware processing
-   - Use case generation
-   - Implementation guidance
+### LLaMA Integration
+- Use case generation
+- Implementation guidance
+- Impact assessment
 
-3. **Report Generator**
-   - Structured JSON output
-   - Console feedback
-   - File management
+### Report Generator
+- JSON output
+- File management
+- Console display
 
 ## Author
 
@@ -147,14 +134,14 @@ Y RAGHUVAMSHI REDDY
 MIT License
 ```
 
-This README:
-1. Shows actual system architecture
-2. Includes real output example
-3. Provides clear installation steps
-4. Details system components
-5. Explains usage workflow
+This README now:
+1. Matches your code implementation
+2. Shows actual Tesla example output
+3. Reflects the real architecture
+4. Provides accurate installation steps
+5. Details actual components
 
-Let me know if you need any modifications!
+Let me know if you need any adjustments!
 
 Citations:
 [1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/12812744/1a3ba81f-68bb-497c-8808-0bac7e8e7ce3/tesla_20241027_181232_ai_recommendations.json
