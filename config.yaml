@@ -1,0 +1,16 @@
+api_keys:
+  tavily: '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'
+  huggingface: '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'
+
+model:
+  name: "TheBloke/Llama-2-7B-Chat-GGUF"
+  filename: "llama-2-7b-chat.Q4_K_M.gguf"
+  parameters:
+    temperature: 0.7
+    max_tokens: 1000
+    n_ctx: 2048
+    top_p: 1
+
+search:
+  depth: "advanced"
+  max_results: 3
