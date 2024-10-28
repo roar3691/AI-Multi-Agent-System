@@ -2,6 +2,43 @@
 
 A multi-agent system that researches companies and generates AI/GenAI use cases using LLaMA model and Tavily API. Built by Y RAGHUVAMSHI REDDY.
 
+## Usage
+
+Run the system:
+```bash
+python ai_usecase_system.py
+```
+
+The system will:
+1. Accept company name input
+2. Research using Tavily API
+3. Generate use cases using LLaMA
+4. Save JSON report
+5. Display results in console
+
+
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/AI-Multi-Agent-System.git
+cd AI-Multi-Agent-System
+```
+
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+3. Set up environment variables:
+   Create `.env` file:
+   ```
+   TAVILY_API_KEY=your_tavily_key
+   HUGGINGFACE_KEY=your_huggingface_key
+   ```
+
+
 ## Architecture
 ```mermaid
 graph TD
@@ -74,39 +111,6 @@ graph TD
   - Tavily API key
   - HuggingFace API key
 
-## Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/AI-Multi-Agent-System.git
-cd AI-Multi-Agent-System
-```
-
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-3. Set up environment variables:
-   Create `.env` file:
-   ```
-   TAVILY_API_KEY=your_tavily_key
-   HUGGINGFACE_KEY=your_huggingface_key
-   ```
-
-## Usage
-
-Run the system:
-```bash
-python ai_usecase_system.py
-```
-
-The system will:
-1. Accept company name input
-2. Research using Tavily API
-3. Generate use cases using LLaMA
-4. Save JSON report
-5. Display results in console
 
 ## Components
 
